@@ -1,81 +1,18 @@
--- Map leader
+-- Set map leader
 vim.g.mapleader = " "
 
--- Include some scripts:
-
--- Plugin script
-require('config.vim-plug')
--- Coc script (autocomplete and LSP)
-vim.cmd('source ~/vimscripts/coc.vim')
--- Bufferline configuration
-vim.cmd('source ~/vimscripts/bufferline.vim')
---  vim tasks
-vim.cmd('source ~/vimscripts/tasks.vim')
---  filetype specificities
-vim.cmd('source ~/vimscripts/filetypes.vim')
---  azerty keyboard specific mappings
-require('config.azerty')
---  Git Gutter
-vim.cmd('source ~/vimscripts/gitgutter.vim')
---  NERDTree
-vim.cmd('source ~/vimscripts/nerdtree.vim')
---  Tagbar
-vim.cmd('source ~/vimscripts/tagbar.vim')
---  Buffers
-vim.cmd('source ~/vimscripts/buffers.vim')
---  Status line
-require('config.lualine')
---  Devicons
-require('config.devicons')
---  Telescope
-require('config.telescope')
---  Greeter
-require('config.alpha')
---  Sessions
-require('config.sessions')
---  Vimwiki
-vim.cmd('source ~/vimscripts/vimwiki.vim')
---  Integrated terminal
-vim.cmd('source ~/vimscripts/terminal.vim')
---  DAP
-require('config.dap')
--- Treesitter
-require('config.treesitter')
--- NeoTree
-require('config.neotree')
-
--- """""""" Custom settings """"""""
-
--- "" Colorscheme !!1!1! and other stuff """
-vim.cmd('colorscheme material-palenight')
-
---  Change Coc colors after colorscheme
--- vim.cmd('hi CocFloating ctermbg=black ctermfg=magenta')
-vim.cmd('hi CocMenuSel guibg=DarkMagenta')
-
---  Autocomplete menu
--- vim.cmd('hi Pmenu ctermbg=black ctermfg=magenta')
-
---  GUI font
-vim.o.guifont = 'Terminus:h14'
-
---  Color column
-vim.o.colorcolumn = "80"
-
---  Cursorline
-vim.o.cursorline = true
-
---  Better split direction
-vim.o.splitbelow = true
-vim.o.splitright = true
-
--- ""
-
---  Line numbers
-vim.o.relativenumber = true
-vim.o.number = true
---  Don't resize splits all the time
-vim.o.equalalways = false
+-- Load various options
+require('options')
+-- Load plugins
+require('vim-plug')
+-- Load plugin configurations
+require('config')
+-- Load custom commands
+require('commands')
+-- Load custom mappings
+require('mappings')
+-- Load colorscheme
+require('colorscheme')
 
 --  Rebind insert mode exit
 vim.keymap.set('i', 'jj', '<Esc>')
@@ -110,14 +47,6 @@ vim.keymap.set('n', '<A-p>', '<C-w>P')
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 
---  Temporary files
-vim.o.backup = true
-vim.o.backupdir = os.getenv('HOME') .. '/.vim/files/backup/'
-vim.o.backupext = '-vimbackup'
-vim.o.directory = os.getenv('HOME') .. '/.vim/files/swap/'
-vim.o.updatecount = 100
-vim.o.undofile = true
-vim.o.undodir = os.getenv('HOME') .. '/.vim/files/undo/'
 
 --  Switch between header / source (depends on clangd)
 vim.keymap.set('n', '<leader>ss :<C-u>CocCommand', 'clangd.switchSourceHeader<CR>')
@@ -129,47 +58,3 @@ vim.keymap.set('n', '<leader>pd :pedit<CR>:wincmd P<CR>:norm', 'gd<CR>')
 
 --  Tagbar
 vim.keymap.set({ 'n', 'v', 'o' }, '<F2>', ':TagbarToggle <CR>')
-
---  Tags navigation
--- vim.keymap.set('n', 'é', '<C-]>')
-
--- """
-
-
--- """ Miscellaneous options """"
---  Make tags with ctags
--- command! MakeTags exec "!ctags -R ."
-
-vim.api.nvim_create_user_command('Config', ':n ~/.config/nvim/init.lua', {})
-vim.api.nvim_create_user_command('Reload', ':so ~/.config/nvim/init.lua', {})
-vim.api.nvim_create_user_command('Lcd', ':lcd %:p:h', {})
-
---  Set tab width to 2 columns
-vim.o.tabstop = 2
-
---  Use 2 columns for indentation
-vim.o.shiftwidth = 2
-
---  Use spaces when pressing <tab> key (expand dong)
-vim.o.expandtab = true
--- set autoindent
--- set smartindent
-
-
---  Buffers
--- set hidden
-
---  Smartcase is pretty good!
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
---  Folding
-vim.o.foldmethod = 'syntax'
-vim.o.foldenable = false
-
---  Transparent background **ALWAYS**
--- hi
--- Normal
--- guibg = NONE
--- ctermbg = NONE
--- """

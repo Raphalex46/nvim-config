@@ -1,0 +1,22 @@
+-- Load vimscript configurations
+vim.cmd('source ~/vimscripts/coc.vim')
+vim.cmd('source ~/vimscripts/bufferline.vim')
+vim.cmd('source ~/vimscripts/tasks.vim')
+vim.cmd('source ~/vimscripts/filetypes.vim')
+vim.cmd('source ~/vimscripts/gitgutter.vim')
+vim.cmd('source ~/vimscripts/nerdtree.vim')
+vim.cmd('source ~/vimscripts/tagbar.vim')
+vim.cmd('source ~/vimscripts/buffers.vim')
+vim.cmd('source ~/vimscripts/vimwiki.vim')
+vim.cmd('source ~/vimscripts/terminal.vim')
+
+-- Load other configurations
+require('config.azerty')
+require('config.lualine')
+require('config.devicons')
+require('config.telescope')
+require('config.alpha')
+require('config.sessions')
+require('config.dap')
+require('config.treesitter')
+require('config.neotree')
