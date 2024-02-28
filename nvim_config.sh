@@ -53,4 +53,5 @@ if [ $install -eq 1 ]; then
   echo "==> Copying files from the repository config to the Neovim config at '$config_dir'"
   (set -x; cp -Tr $REPO_CONFIG $backup; cp -Tr $REPO_CONFIG $config_dir)
   echo "==> Old config was backed up at '$backup'"
+  echo "==> Please launch nvim and run :PlugInstall to complete the installation"
 fi
