@@ -1,4 +1,7 @@
 require('neo-tree').setup({
+  filesystem = {
+    hijack_netrw_behavior = 'open_current'
+  },
   window = {
     mappings = {
       ["o"] = { "open" },
@@ -16,7 +19,6 @@ require('neo-tree').setup({
       ["on"] = "none",
       ["os"] = "none",
       ["ot"] = "none"
-
     }
   }
 })
