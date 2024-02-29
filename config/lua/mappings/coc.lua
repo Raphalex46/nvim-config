@@ -14,7 +14,14 @@ vim.keymap.set('i', '<C-k>', [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]],
 
 -- Make <TAB> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
-vim.keymap.set('i', '<TAB>', [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+vim.keymap.set('i', '<TAB>',
+  function()
+    if vim.fn['coc#pum#visible']() == 1 then
+      return vim.fn['coc#pum#confirm']()
+    else
+      return '	'
+    end
+  end, opts)
 
 -- Use <C-space> to trigger completion
 vim.keymap.set('i', '<C-Space>', "coc#refresh()", { silent = true, expr = true })
