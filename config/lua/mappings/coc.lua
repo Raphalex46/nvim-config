@@ -61,4 +61,6 @@ vim.keymap.set('n', '<Leader>cf', '<Plug>(coc-format-document)', { silent = true
 -- Example: `<leader>aap` for current paragraph
 opts = { silent = true, nowait = true }
 vim.keymap.set('x', '<Leader>ca', '<Plug>(coc-codeaction-selected)', opts)
-vim.keymap.set('n', '<Leader>ca', '<Plug>(coc-codeaction-selected)', opts)
+vim.keymap.set('n', '<Leader>ca', '<Plug>(coc-codeaction-cursor)', opts)
+
+vim.keymap.set('n', '<Leader>ss', ':CocCommand clangd.switchSourceHeader<CR>', { silent = true })
