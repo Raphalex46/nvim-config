@@ -63,4 +63,13 @@ opts = { silent = true, nowait = true }
 vim.keymap.set('x', '<Leader>ca', '<Plug>(coc-codeaction-selected)', opts)
 vim.keymap.set('n', '<Leader>ca', '<Plug>(coc-codeaction-cursor)', opts)
 
+-- Switch source / header with clangd
 vim.keymap.set('n', '<Leader>ss', ':CocCommand clangd.switchSourceHeader<CR>', { silent = true })
+
+-- Display definition under cursor in floating window
+vim.keymap.set('n', 'gp',
+  function()
+    vim.api.nvim_open_win(0, true, { width = 81, height = 8, relative = 'cursor', bufpos = { 10, 10 } })
+    vim.fn['CocAction']('jumpDefinition')
+  end,
+  { silent = true })
