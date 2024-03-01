@@ -1,5 +1,6 @@
 require('mappings.general')
 require('mappings.tagbar')
+require('mappings.neotree')
 require('mappings.coc')
 require('mappings.gitgutter')
 

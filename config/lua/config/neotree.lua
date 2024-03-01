@@ -22,5 +22,3 @@ require('neo-tree').setup({
     }
   }
 })
-
-vim.keymap.set({ 'n', 'i' }, '<F1>', ':Neotree toggle<CR>', { silent = true })
