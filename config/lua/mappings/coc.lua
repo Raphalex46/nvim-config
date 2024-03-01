@@ -77,8 +77,6 @@ do
           relative = 'cursor',
           bufpos = { 0, 0 },
           border = 'rounded',
-          style =
-          'minimal'
         })
       if not vim.fn['CocAction']('jumpDefinition') then
         vim.api.nvim_win_close(win_id, false)
