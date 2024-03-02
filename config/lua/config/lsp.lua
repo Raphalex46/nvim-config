@@ -17,3 +17,9 @@ lspconfig.lua_ls.setup({
   capabilities = capabilities,
   on_attach = format_on_save
 })
+
+-- Rust
+lspconfig.rust_analyzer.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save
+})
