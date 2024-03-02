@@ -41,7 +41,7 @@ Plug('nvim-neo-tree/neo-tree.nvim')
 -- Display tags in current file
 Plug('preservim/tagbar')
 -- Autocomplete and LSP
-Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
+-- Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
 -- Git integration
 Plug('tpope/vim-fugitive')
 Plug('airblade/vim-gitgutter')
