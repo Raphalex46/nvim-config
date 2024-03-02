@@ -21,6 +21,15 @@ local function telescope()
   Plug('nvim-telescope/telescope-file-browser.nvim')
 end
 
+-- nvim-cmp and related extensions
+local function nvim_cmp()
+  Plug('hrsh7th/nvim-cmp')
+  Plug('hrsh7th/cmp-nvim-lsp')
+  Plug('hrsh7th/cmp-buffer')
+  Plug('hrsh7th/cmp-path')
+  Plug('hrsh7th/cmp-cmdline')
+  Plug('L3MON4D3/LuaSnip')
+end
 
 vim.call('plug#begin')
 
@@ -30,6 +39,8 @@ requirements()
 color_schemes()
 -- Load Telescope
 telescope()
+-- Completion
+nvim_cmp()
 -- Vim sensible defaults
 Plug('tpope/vim-sensible')
 -- Quick horizontal navigation with f key
@@ -60,5 +71,7 @@ Plug('goolord/alpha-nvim')
 Plug('vimwiki/vimwiki')
 -- DAP
 Plug('mfussenegger/nvim-dap')
+-- LSP Config
+Plug('neovim/nvim-lspconfig')
 
 vim.call('plug#end')
