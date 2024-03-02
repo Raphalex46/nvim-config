@@ -45,13 +45,13 @@ fi
 
 if [ $update -eq 1 ]; then
   echo "==> Copying files from Neovim config at '$config_dir'"
-  (set -x; cp -Tr $config_dir $REPO_CONFIG)
+  (set -x; rm $REPO_CONFIG -r; cp -r $config_dir $REPO_CONFIG)
 fi
 
 if [ $install -eq 1 ]; then
   backup=$(dirname $config_dir)/$(basename $config_dir).backup
   echo "==> Copying files from the repository config to the Neovim config at '$config_dir'"
-  (set -x; cp -Tr $REPO_CONFIG $backup; cp -Tr $REPO_CONFIG $config_dir)
+  (set -x; cp -Tr $REPO_CONFIG $backup; rm $config_dir -r; cp -r $REPO_CONFIG $config_dir)
   echo "==> Old config was backed up at '$backup'"
   echo "==> Please launch nvim and run :PlugInstall to complete the installation"
 fi
