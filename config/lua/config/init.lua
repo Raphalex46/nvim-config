@@ -1,6 +1,3 @@
--- Load vimscript configurations
-vim.cmd('source ~/vimscripts/terminal.vim')
-
 -- Load other configurations
 require('config.gitgutter')
 require('config.azerty')
