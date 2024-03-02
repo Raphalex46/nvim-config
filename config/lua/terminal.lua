@@ -17,3 +17,7 @@ local function terminal_open_or_jump()
     vim.fn.win_gotoid(term_win_id)
   end
 end
+
+return {
+  open_or_jump = terminal_open_or_jump
+}

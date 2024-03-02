@@ -21,7 +21,7 @@ cmp.setup({
       else
         fallback()
       end
-    end, {'i', 's'}),
+    end, { 'i', 's' }),
     ['<C-k>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -30,13 +30,13 @@ cmp.setup({
       else
         fallback()
       end
-    end, {'i', 's'}),
+    end, { 'i', 's' }),
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
   sources = cmp.config.sources({
-    {name = 'nvim_lsp'},
-    {name = 'luasnip'},
-    {name = 'buffer'},
-    {name = 'path'}
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'path' }
   })
 })

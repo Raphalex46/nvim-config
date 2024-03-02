@@ -28,6 +28,7 @@ local function nvim_cmp()
   Plug('hrsh7th/cmp-buffer')
   Plug('hrsh7th/cmp-path')
   Plug('hrsh7th/cmp-cmdline')
+  Plug('saadparwaiz1/cmp_luasnip')
   Plug('L3MON4D3/LuaSnip')
 end
 
