@@ -23,3 +23,8 @@ lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   on_attach = format_on_save
 })
+
+-- C/C++
+lspconfig.clangd.setup({
+  capabilities = capabilities
+})
