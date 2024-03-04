@@ -12,6 +12,12 @@ local function format_on_save(client, bufnr)
   end
 end
 
+-- Make diagnostics readable with a floating window
+vim.o.updatetime = 400
+vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+  callback = function() vim.diagnostic.open_float(nil, { focus = false }) end
+})
+
 -- Lua
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
