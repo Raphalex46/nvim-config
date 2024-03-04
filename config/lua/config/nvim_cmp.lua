@@ -1,10 +1,14 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
+
 cmp.setup({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end
+  },
+  completion = {
+    completeopt = 'menuone'
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
