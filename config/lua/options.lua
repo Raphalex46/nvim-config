@@ -47,3 +47,6 @@ vim.o.smartcase = true
 --  Folding
 vim.o.foldmethod = 'syntax'
 vim.o.foldenable = false
+
+-- Remove '~' signs from the gutter
+vim.o.fillchars = 'eob: '
