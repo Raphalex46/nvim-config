@@ -41,3 +41,9 @@ lspconfig.hls.setup({
   on_attach = format_on_save,
   filetypes = { 'haskell', 'lhaskell', 'cabal' },
 })
+
+-- CMake
+lspconfig.neocmake.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save
+})
