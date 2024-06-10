@@ -47,3 +47,15 @@ lspconfig.neocmake.setup({
   capabilities = capabilities,
   on_attach = format_on_save
 })
+
+-- Python
+lspconfig.pyright.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save,
+})
+
+-- LaTeX
+lspconfig.texlab.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save,
+})
