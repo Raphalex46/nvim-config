@@ -74,5 +74,7 @@ Plug('vimwiki/vimwiki')
 Plug('mfussenegger/nvim-dap')
 -- LSP Config
 Plug('neovim/nvim-lspconfig')
+-- Breadcrumbs
+Plug('Bekaboo/dropbar.nvim')
 
 vim.call('plug#end')
