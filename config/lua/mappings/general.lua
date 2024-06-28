@@ -35,3 +35,11 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 -- Use <C-j> and <C-k> to navigate buffers
 vim.keymap.set('n', '<C-j>', ':bp <CR>', { silent = true })
 vim.keymap.set('n', '<C-k>', ':bn <CR>', { silent = true })
+
+-- Use <Leader>e and a character for enclosing a word between some characters using the `:Enclose` command
+vim.keymap.set('n', '<Leader>e',
+  function()
+    local enclosing_char = vim.fn.input('Enclosing character: ')
+    vim.cmd('Enclose ' .. enclosing_char)
+  end
+)

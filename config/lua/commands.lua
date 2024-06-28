@@ -18,19 +18,29 @@ do
     desc = "Open configuration directory (lua/)"
   })
   vim.api.nvim_create_user_command('Reload',
-  function()
-    local prefixes_to_reload = {'config', 'mappings', 'colorscheme', 'commands',
-    'options', 'terminal', 'utils', 'vim-plug'}
-    -- Start by uncaching all modules
-    for name, _ in pairs(package.loaded) do
-      for _, pref in ipairs(prefixes_to_reload) do
-        if name:match('^' .. pref) then
-          package.loaded[name] = nil
-          require(name)
-          print('Reloaded \'' .. name .. '\'')
+    function()
+      local prefixes_to_reload = { 'config', 'mappings', 'colorscheme', 'commands',
+        'options', 'terminal', 'utils', 'vim-plug' }
+      -- Start by uncaching all modules
+      for name, _ in pairs(package.loaded) do
+        for _, pref in ipairs(prefixes_to_reload) do
+          if name:match('^' .. pref) then
+            package.loaded[name] = nil
+            require(name)
+            print('Reloaded \'' .. name .. '\'')
+          end
         end
       end
-    end
-  end,
+    end,
     { desc = "Reload the main configuration file (init.lua)" })
+end
+
+-- Definition of the :Enclose command
+do
+  vim.api.nvim_create_user_command('Enclose',
+    function(opts)
+      local str = opts.fargs[1]
+      vim.cmd('norm ciw' .. str .. str)
+      vim.cmd('norm P')
+    end, { nargs = 1 })
 end
