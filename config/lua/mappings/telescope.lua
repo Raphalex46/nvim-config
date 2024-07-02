@@ -16,5 +16,6 @@ do
   vim.keymap.set('n', '<Leader>lr', builtin.lsp_references)
   vim.keymap.set('n', '<Leader>ld', builtin.diagnostics)
   vim.keymap.set('n', '<Leader>ls', builtin.lsp_workspace_symbols)
+  vim.keymap.set('n', '<Leader>lb', builtin.lsp_document_symbols)
   vim.keymap.set('n', 'gd', builtin.lsp_definitions)
 end
