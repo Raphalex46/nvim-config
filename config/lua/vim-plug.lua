@@ -50,8 +50,8 @@ Plug('unblevable/quick-scope')
 Plug('nvim-lualine/lualine.nvim')
 -- File browser
 Plug('nvim-neo-tree/neo-tree.nvim')
--- Display tags in current file
-Plug('preservim/tagbar')
+-- Outline
+Plug('hedyhli/outline.nvim')
 -- Autocomplete and LSP
 -- Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
 -- Git integration

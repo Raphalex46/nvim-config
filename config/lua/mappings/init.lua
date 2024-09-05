@@ -1,5 +1,5 @@
 require('mappings.general')
-require('mappings.tagbar')
+require('mappings.outline')
 require('mappings.neotree')
 require('mappings.gitgutter')
 require('mappings.telescope')
