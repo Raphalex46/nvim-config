@@ -4,5 +4,8 @@ outline.setup({
   outline_window = {
     width = 38,
     relative_width = false
+  },
+  keymaps = {
+    close = {},
   }
 })
