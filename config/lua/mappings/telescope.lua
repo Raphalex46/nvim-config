@@ -1,12 +1,21 @@
 do
   -- Telescope key mappings
   local builtin = require('telescope.builtin')
+  local actions = require('telescope.actions')
   local extensions = require('telescope').extensions
   vim.keymap.set('n', '<Leader>ff', builtin.find_files, {})
   vim.keymap.set('n', '<Leader>fg', builtin.live_grep, {})
   vim.keymap.set('n', '<Leader>fo', builtin.oldfiles, {})
   vim.keymap.set('n', '<Leader>fm', builtin.marks, {})
-  vim.keymap.set('n', '<Leader>b', builtin.buffers, {})
+  -- Custom mapping for the buffer picker (press d to delete a buffer)
+  vim.keymap.set('n', '<Leader>b', function()
+    builtin.buffers{
+      attach_mappings = function(_, map)
+        map("n", "d", actions.delete_buffer)
+        return true
+      end
+    }
+  end, {})
   vim.keymap.set('n', '<Leader>sd', extensions.coc.document_symbols, {})
   vim.keymap.set('n', '<Leader>sw', extensions.coc.workspace_symbols, {})
   vim.keymap.set('n', '<Leader>cd', extensions.coc.diagnostics, {})
