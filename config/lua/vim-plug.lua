@@ -11,6 +11,11 @@ end
 local function color_schemes()
   Plug('rebelot/kanagawa.nvim')
   Plug('marko-cerovac/material.nvim')
+  Plug('EdenEast/nightfox.nvim')
+  Plug('ray-x/aurora')
+  Plug('maxmx03/fluoromachine.nvim')
+  Plug('miikanissi/modus-themes.nvim')
+  Plug('oneslash/helix-nvim')
 end
 
 -- Telescope and related extensions
