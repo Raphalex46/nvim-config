@@ -79,6 +79,9 @@ Plug('vimwiki/vimwiki')
 Plug('mfussenegger/nvim-dap')
 -- LSP Config
 Plug('neovim/nvim-lspconfig')
+-- Mason
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 -- Breadcrumbs
 Plug('Bekaboo/dropbar.nvim')
 

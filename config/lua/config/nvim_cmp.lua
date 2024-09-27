@@ -2,6 +2,9 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
 
 cmp.setup({
+  performance = {
+    max_view_entries = 15
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)

@@ -12,11 +12,12 @@ local function format_on_save(client, bufnr)
   end
 end
 
--- Make diagnostics readable with a floating window
-vim.o.updatetime = 400
-vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-  callback = function() vim.diagnostic.open_float(nil, { focus = false }) end
-})
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, {
+    silent = true,
+    focusable = false
+  }
+)
 
 -- Lua
 lspconfig.lua_ls.setup({
@@ -32,7 +33,8 @@ lspconfig.rust_analyzer.setup({
 
 -- C/C++
 lspconfig.clangd.setup({
-  capabilities = capabilities
+  capabilities = capabilities,
+  cmd = {"clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true"},
 })
 
 -- Haskell
