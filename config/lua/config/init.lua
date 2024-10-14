@@ -1,5 +1,6 @@
 -- Load other configurations
 require('config.gitgutter')
+require('config.gitconflict')
 require('config.azerty')
 require('config.lualine')
 require('config.devicons')

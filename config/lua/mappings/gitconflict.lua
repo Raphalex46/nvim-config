@@ -1,0 +1,5 @@
+vim.keymap.set('n', '<Leader>cj', ':GitConflictNextConflict<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>ck', ':GitConflictPrevConflict<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>co', ':GitConflictChooseOurs<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>ct', ':GitConflictChooseTheirs<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>cb', ':GitConflictChooseBoth<CR>', { silent = true })

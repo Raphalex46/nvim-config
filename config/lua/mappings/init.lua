@@ -1,4 +1,5 @@
 require('mappings.general')
+require('mappings.gitconflict')
 require('mappings.outline')
 require('mappings.neotree')
 require('mappings.gitgutter')
