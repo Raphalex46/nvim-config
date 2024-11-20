@@ -34,7 +34,7 @@ lspconfig.rust_analyzer.setup({
 -- C/C++
 lspconfig.clangd.setup({
   capabilities = capabilities,
-  cmd = {"clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true"},
+  cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true" },
 })
 
 -- Haskell
@@ -58,6 +58,18 @@ lspconfig.pyright.setup({
 
 -- LaTeX
 lspconfig.texlab.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save,
+})
+
+-- CSS
+lspconfig.cssls.setup({
+  capabilities = capabilities,
+  on_attach = format_on_save,
+})
+
+-- Typst
+lspconfig.typst_lsp.setup({
   capabilities = capabilities,
   on_attach = format_on_save,
 })
