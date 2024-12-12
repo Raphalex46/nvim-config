@@ -85,5 +85,7 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 -- Breadcrumbs
 Plug('Bekaboo/dropbar.nvim')
+-- Indentation lines
+Plug('lukas-reineke/indent-blankline.nvim')
 
 vim.call('plug#end')
