@@ -3,6 +3,7 @@ require('neo-tree').setup({
     hijack_netrw_behavior = 'open_current'
   },
   window = {
+    width = 30,
     mappings = {
       ["o"] = { "open" },
       ["uc"] = { "order_by_created", nowait = false },
