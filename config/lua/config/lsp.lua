@@ -69,7 +69,7 @@ lspconfig.cssls.setup({
 })
 
 -- Typst
-lspconfig.typst_lsp.setup({
+lspconfig.tinymist.setup({
   capabilities = capabilities,
   on_attach = format_on_save,
 })
