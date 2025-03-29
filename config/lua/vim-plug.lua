@@ -62,7 +62,7 @@ Plug('hedyhli/outline.nvim')
 -- Git integration
 Plug('tpope/vim-fugitive')
 Plug('airblade/vim-gitgutter')
-Plug('akinsho/git-conflict.nvim')
+Plug('akinsho/git-conflict.nvim', { ['tag'] = 'v2.1.0' })
 -- Various icons
 Plug('nvim-tree/nvim-web-devicons')
 -- Telescope
