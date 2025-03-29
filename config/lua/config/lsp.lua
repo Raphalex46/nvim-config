@@ -34,7 +34,7 @@ lspconfig.rust_analyzer.setup({
 -- C/C++
 lspconfig.clangd.setup({
   capabilities = capabilities,
-  cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true" },
+  cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true", "--hidden-features" },
 })
 
 -- Haskell
