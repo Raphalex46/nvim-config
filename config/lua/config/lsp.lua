@@ -72,4 +72,8 @@ lspconfig.cssls.setup({
 lspconfig.tinymist.setup({
   capabilities = capabilities,
   on_attach = format_on_save,
+  settings = {
+    formatterMode = "typstyle",
+    exportPdf = "onSave"
+  }
 })
