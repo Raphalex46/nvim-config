@@ -87,5 +87,7 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug('Bekaboo/dropbar.nvim')
 -- Indentation lines
 Plug('lukas-reineke/indent-blankline.nvim')
+-- Transparency
+Plug('xiyaowong/transparent.nvim')
 
 vim.call('plug#end')
