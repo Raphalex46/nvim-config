@@ -52,7 +52,7 @@ local function terminal_float_or_close()
     end
     open_float(term_buf_id)
     if new_buf then
-      vim.cmd('term')
+      vim.fn.termopen(os.getenv("SHELL"), { detach = 0 })
     end
   end
 end
