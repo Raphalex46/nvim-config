@@ -1,23 +1,62 @@
-local term_open = false
-local term_win_id = 0
+-- Terminal floating window id
+local term_win_id = -1
+-- Terminal buffer id
+local term_buf_id = -1
 
-local function terminal_open()
-  vim.cmd('botright split | resize 10 | term')
-  term_win_id = vim.fn.win_getid()
+-- Check if given float is open
+local function float_is_open(id)
+  return (id ~= -1) and vim.api.nvim_win_is_valid(id)
 end
 
-local function terminal_open_or_jump()
-  if term_open then
-    terminal_open()
-    term_open = true
+-- Check if given buffer exists
+local function buf_exists(id)
+  return (id ~= -1) and vim.api.nvim_buf_is_valid(id)
+end
+
+-- Open terminal float
+local function open_float(buf_id)
+  local width = vim.o.columns
+  local height = vim.o.lines
+  term_win_id = vim.api.nvim_open_win(
+    buf_id, true, {
+      relative = 'editor',
+      width = width - 6,
+      height = height - 6,
+      bufpos = { 0, 0 },
+      border = 'double',
+      row = 2,
+      col = 2,
+    }
+  )
+end
+
+-- Close terminal float
+local function close_term_float()
+  vim.api.nvim_win_close(term_win_id, true)
+  term_win_id = -1
+end
+
+
+-- Main function: closes the terminal window if it already exists
+-- (without closing the buffer), and opens a new floating window
+-- and / or buffer if the terminal is closed
+local function terminal_float_or_close()
+  if float_is_open(term_win_id) then
+    close_term_float()
+    term_win_id = -1
   else
-    if vim.fn.win_gotoid(term_win_id) == 0 then
-      terminal_open()
+    local new_buf = false
+    if not buf_exists(term_buf_id) then
+      term_buf_id = vim.api.nvim_create_buf(false, true)
+      new_buf = true
     end
-    vim.fn.win_gotoid(term_win_id)
+    open_float(term_buf_id)
+    if new_buf then
+      vim.cmd('term')
+    end
   end
 end
 
 return {
-  open_or_jump = terminal_open_or_jump
+  terminal_float_or_close = terminal_float_or_close,
 }
