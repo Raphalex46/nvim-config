@@ -20,56 +20,56 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 )
 
 -- Lua
-lspconfig.lua_ls.setup({
+vim.lsp.config('lua', {
   capabilities = capabilities,
   on_attach = format_on_save
 })
 
 -- Rust
-lspconfig.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
   capabilities = capabilities,
   on_attach = format_on_save
 })
 
 -- C/C++
-lspconfig.clangd.setup({
+vim.lsp.config('clangd', {
   capabilities = capabilities,
   cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--function-arg-placeholders", "--inlay-hints=true", "--hidden-features" },
 })
 
 -- Haskell
-lspconfig.hls.setup({
+vim.lsp.config('hls', {
   capabilities = capabilities,
   on_attach = format_on_save,
   filetypes = { 'haskell', 'lhaskell', 'cabal' },
 })
 
 -- CMake
-lspconfig.neocmake.setup({
+vim.lsp.config('neocmake', {
   capabilities = capabilities,
   on_attach = format_on_save
 })
 
 -- Python
-lspconfig.pyright.setup({
+vim.lsp.config('pyright', {
   capabilities = capabilities,
   on_attach = format_on_save,
 })
 
 -- LaTeX
-lspconfig.texlab.setup({
+vim.lsp.config('texlab', {
   capabilities = capabilities,
   on_attach = format_on_save,
 })
 
 -- CSS
-lspconfig.cssls.setup({
+vim.lsp.config('cssls', {
   capabilities = capabilities,
   on_attach = format_on_save,
 })
 
 -- Typst
-lspconfig.tinymist.setup({
+vim.lsp.config('tinymist', {
   capabilities = capabilities,
   on_attach = format_on_save,
   settings = {
