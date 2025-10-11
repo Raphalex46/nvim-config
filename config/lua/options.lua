@@ -50,3 +50,5 @@ vim.o.foldenable = false
 
 -- Remove '~' signs from the gutter
 vim.o.fillchars = 'eob: '
+
+vim.o.clipboard = 'unnamedplus'
