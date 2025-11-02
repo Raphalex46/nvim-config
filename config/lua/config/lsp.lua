@@ -86,3 +86,10 @@ vim.lsp.config('tinymist', {
     exportPdf = "onSave"
   }
 })
+
+-- GDScript
+vim.lsp.enable('gdscript')
+vim.lsp.config('gdscript', {
+  capabilities = capabilities,
+  on_attach = format_on_save
+})
