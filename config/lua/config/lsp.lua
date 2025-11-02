@@ -20,8 +20,8 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 )
 
 -- Lua
-vim.lsp.enable('lua')
-vim.lsp.config('lua', {
+vim.lsp.enable('luals')
+vim.lsp.config('luals', {
   capabilities = capabilities,
   on_attach = format_on_save
 })
