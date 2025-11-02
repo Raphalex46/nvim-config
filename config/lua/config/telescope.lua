@@ -1,3 +1,6 @@
+local fb_actions = require('telescope').extensions.file_browser.actions
+local actions = require('telescope.actions')
+
 -- Setup for extensions
 require('telescope').setup({
   defaults = {
@@ -6,6 +9,15 @@ require('telescope').setup({
   extensions = {
     ['ui-select'] = {
       require('telescope.themes').get_dropdown {}
+    },
+    file_browser = {
+      grouped = true,
+      mappings = {
+        ["n"] = {
+          ["p"] = fb_actions.goto_parent_dir,
+          ["o"] = actions.select_default
+        }
+      }
     }
   },
 })
