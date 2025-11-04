@@ -5,6 +5,7 @@ local function requirements()
   Plug('xolox/vim-misc')
   Plug('nvim-lua/plenary.nvim')
   Plug('MunifTanjim/nui.nvim')
+  Plug('MeanderingProgrammer/render-markdown.nvim')
 end
 
 -- Color schemes
@@ -89,5 +90,7 @@ Plug('Bekaboo/dropbar.nvim')
 Plug('lukas-reineke/indent-blankline.nvim')
 -- Transparency
 Plug('xiyaowong/transparent.nvim')
+-- Daily tips
+Plug('saxon1964/neovim-tips')
 
 vim.call('plug#end')
