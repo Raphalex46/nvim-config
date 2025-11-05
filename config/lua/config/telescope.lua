@@ -3,6 +3,11 @@ local actions = require('telescope.actions')
 
 -- Setup for extensions
 require('telescope').setup({
+  pickers = {
+    colorscheme = {
+      enable_preview = true
+    }
+  },
   defaults = {
     initial_mode = 'normal'
   },

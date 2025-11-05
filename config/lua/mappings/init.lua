@@ -8,6 +8,7 @@ require('mappings.dap')
 require('mappings.sessions')
 require('mappings.terminal')
 require('mappings.lsp')
+require('mappings.neorg')
 
 --  show definition in preview window
 vim.keymap.set('n', '<Leader>pd :pedit<CR>:wincmd P<CR>:norm', 'gd<CR>')

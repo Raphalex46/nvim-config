@@ -8,6 +8,13 @@ local function requirements()
   Plug('MeanderingProgrammer/render-markdown.nvim')
 end
 
+-- Requirements specific to Neorg
+local function neorg_requirements()
+  Plug('nvim-neorg/lua-utils.nvim')
+  Plug('pysan3/pathlib.nvim')
+  Plug('nvim-neotest/nvim-nio')
+end
+
 -- Color schemes
 local function color_schemes()
   Plug('rebelot/kanagawa.nvim')
@@ -93,5 +100,10 @@ Plug('lukas-reineke/indent-blankline.nvim')
 Plug('xiyaowong/transparent.nvim')
 -- Daily tips
 Plug('saxon1964/neovim-tips')
+-- Neogit
+Plug('NeogitOrg/neogit')
+-- Neorg
+neorg_requirements()
+Plug('nvim-neorg/neorg')
 
 vim.call('plug#end')
