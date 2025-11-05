@@ -1,5 +1,5 @@
 -- The 'aurora' theme completion menu is ugly, somehow this fixes it :)
-vim.cmd('colorscheme fluoromachine')
+vim.cmd('colorscheme catppuccin-mocha')
 -- vim.cmd('colorscheme aurora')
 
 -- Fix color of CocMenuSel
