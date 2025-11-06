@@ -15,6 +15,10 @@ local function neorg_requirements()
   Plug('nvim-neotest/nvim-nio')
 end
 
+local function neogit_requirements()
+  Plug('sindrets/diffview.nvim')
+end
+
 -- Color schemes
 local function color_schemes()
   Plug('rebelot/kanagawa.nvim')
@@ -101,9 +105,12 @@ Plug('xiyaowong/transparent.nvim')
 -- Daily tips
 Plug('saxon1964/neovim-tips')
 -- Neogit
+neogit_requirements()
 Plug('NeogitOrg/neogit')
 -- Neorg
 neorg_requirements()
 Plug('nvim-neorg/neorg')
+-- Noice
+Plug('folke/noice.nvim')
 
 vim.call('plug#end')
