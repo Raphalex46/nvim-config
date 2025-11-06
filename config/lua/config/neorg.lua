@@ -1,6 +1,8 @@
 require('neorg').setup({
   load = {
     ["core.defaults"] = {},
-    ["core.concealer"] = {}
+    ["core.concealer"] = {},
+    ["core.dirman"] = {},
+    ["core.keybinds"] = {}
   }
 })
