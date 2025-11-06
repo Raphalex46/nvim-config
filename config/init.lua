@@ -1,5 +1,6 @@
 -- Set map leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = "ù"
 
 -- Load various options
 require('options')
