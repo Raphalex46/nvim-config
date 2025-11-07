@@ -25,7 +25,7 @@ local function color_schemes()
   Plug('maxmx03/fluoromachine.nvim')
   Plug('miikanissi/modus-themes.nvim')
   Plug('oneslash/helix-nvim')
-  Plug('catppuccin/nvim')
+  Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 end
 
 -- Telescope and related extensions
