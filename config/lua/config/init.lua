@@ -1,5 +1,4 @@
 -- Load other configurations
-require('config.gitgutter')
 require('config.gitconflict')
 require('config.azerty')
 require('config.lualine')
@@ -19,6 +18,6 @@ require('config.outline')
 require('config.ident_blankline')
 require('config.godot')
 require('config.neovim_tips')
-require('config.neogit')
 require('config.neorg')
 require('config.noice')
+require('config.gitsigns')

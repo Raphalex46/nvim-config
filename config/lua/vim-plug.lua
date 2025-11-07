@@ -15,9 +15,6 @@ local function neorg_requirements()
   Plug('nvim-neotest/nvim-nio')
 end
 
-local function neogit_requirements()
-  Plug('sindrets/diffview.nvim')
-end
 
 -- Color schemes
 local function color_schemes()
@@ -74,7 +71,6 @@ Plug('hedyhli/outline.nvim')
 -- Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
 -- Git integration
 Plug('tpope/vim-fugitive')
-Plug('airblade/vim-gitgutter')
 Plug('akinsho/git-conflict.nvim', { ['tag'] = 'v2.1.0' })
 -- Various icons
 Plug('nvim-tree/nvim-web-devicons')
@@ -104,9 +100,10 @@ Plug('lukas-reineke/indent-blankline.nvim')
 Plug('xiyaowong/transparent.nvim')
 -- Daily tips
 Plug('saxon1964/neovim-tips')
--- Neogit
-neogit_requirements()
-Plug('NeogitOrg/neogit')
+-- Diffview
+Plug('sindrets/diffview.nvim')
+-- Gitsignes
+Plug('lewis6991/gitsigns.nvim')
 -- Neorg
 neorg_requirements()
 Plug('nvim-neorg/neorg')
