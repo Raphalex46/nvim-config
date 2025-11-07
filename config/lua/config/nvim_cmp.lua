@@ -1,10 +1,8 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
-
+-- Change height of Neovim popup menu to reduce completion window size.
+vim.o.pumheight = 20
 cmp.setup({
-  performance = {
-    max_view_entries = 15
-  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -17,6 +15,10 @@ cmp.setup({
   },
   completion = {
     completeopt = 'menuone'
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
