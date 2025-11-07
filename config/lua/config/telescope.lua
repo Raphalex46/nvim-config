@@ -9,7 +9,10 @@ require('telescope').setup({
     }
   },
   defaults = {
-    initial_mode = 'normal'
+    initial_mode = 'normal',
+    layout_strategy = 'flex',
+    sorting_strategy = 'ascending',
+    winblend = 30,
   },
   extensions = {
     ['ui-select'] = {
