@@ -21,3 +21,6 @@ vim.keymap.set('n', 'gp', function()
   vim.cmd('normal gd')
 end
 )
+
+-- A little shortcut for clangd
+vim.keymap.set('n', '<Localleader>s', function() vim.cmd('LspClangdSwitchSourceHeader') end)
