@@ -34,6 +34,7 @@ local function telescope()
   Plug('fannheyward/telescope-coc.nvim')
   Plug('nvim-telescope/telescope-ui-select.nvim')
   Plug('nvim-telescope/telescope-file-browser.nvim')
+  Plug('ghassan0/telescope-glyph.nvim')
 end
 
 -- nvim-cmp and related extensions
