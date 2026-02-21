@@ -1,4 +1,16 @@
 require('noice').setup({
+  routes = {
+    {
+      view = "notify",
+      filter = {
+        event = "msg_show",
+        kind = {
+          "shell_out",
+          "shell_err"
+        }
+      }
+    }
+  },
   cmdline = {
     enabled = true,
     view = "cmdline",
@@ -15,5 +27,5 @@ require('noice').setup({
         col = 0
       }
     }
-  },
+  }
 })
