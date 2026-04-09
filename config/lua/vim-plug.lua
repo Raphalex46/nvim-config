@@ -68,16 +68,14 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-neo-tree/neo-tree.nvim')
 -- Outline
 Plug('hedyhli/outline.nvim')
--- Autocomplete and LSP
--- Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
 -- Git integration
 Plug('tpope/vim-fugitive')
-Plug('akinsho/git-conflict.nvim', { ['tag'] = 'v2.1.0' })
+Plug('akinsho/git-conflict.nvim')
 -- Various icons
 Plug('nvim-tree/nvim-web-devicons')
 -- Telescope
 -- Tree sitter integration
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = 'TSUpdate' })
+Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master'} )
 -- Session management
 Plug('Shatur/neovim-session-manager')
 -- Ascii art

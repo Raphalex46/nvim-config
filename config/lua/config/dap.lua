@@ -29,6 +29,3 @@ dap.configurations.c = {
 }
 
 dap.configurations.cpp = dap.configurations.c
-
--- Loading the launch.json
-require('dap.ext.vscode').load_launchjs("launch.json", { gdb = { 'c', 'cpp' }, lldb = { 'c', 'cpp' } })

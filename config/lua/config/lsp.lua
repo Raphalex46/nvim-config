@@ -12,12 +12,13 @@ local function format_on_save(client, bufnr)
   end
 end
 
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    silent = true,
-    focusable = false
-  }
-)
+-- Deprecated. TODO: find replacement
+-- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+--   vim.lsp.handlers.signature_help, {
+--     silent = true,
+--     focusable = false
+--   }
+-- )
 
 -- Lua
 vim.lsp.enable('luals')
