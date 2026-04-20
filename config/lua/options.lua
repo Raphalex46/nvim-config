@@ -52,3 +52,6 @@ vim.o.foldenable = false
 vim.o.fillchars = 'eob: '
 
 vim.o.clipboard = 'unnamedplus'
+
+-- Insert comments when pressing Enter in insert mode but not 'o' in normal mode
+vim.o.formatoptions = "jcrql"
