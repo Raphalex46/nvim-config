@@ -1,5 +1,4 @@
--- The 'aurora' theme completion menu is ugly, somehow this fixes it :)
-vim.cmd('colorscheme catppuccin-mocha')
+vim.cmd('colorscheme tokyonight-storm')
 -- vim.cmd('colorscheme aurora')
 require('catppuccin').setup({
   term_colors = true

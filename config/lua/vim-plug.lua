@@ -26,6 +26,7 @@ local function color_schemes()
   Plug('miikanissi/modus-themes.nvim')
   Plug('oneslash/helix-nvim')
   Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
+  Plug('folke/tokyonight.nvim')
 end
 
 -- Telescope and related extensions
