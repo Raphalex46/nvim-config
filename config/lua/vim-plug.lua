@@ -76,13 +76,11 @@ Plug('akinsho/git-conflict.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 -- Telescope
 -- Tree sitter integration
-Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master'} )
+Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master' })
 -- Session management
 Plug('Shatur/neovim-session-manager')
 -- Ascii art
 Plug('MaximilianLloyd/ascii.nvim')
--- Dashboard
-Plug('goolord/alpha-nvim')
 -- VimWiki
 Plug('vimwiki/vimwiki')
 -- DAP
