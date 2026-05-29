@@ -105,7 +105,5 @@ Plug('lewis6991/gitsigns.nvim')
 -- Neorg
 neorg_requirements()
 Plug('nvim-neorg/neorg')
--- Noice
-Plug('folke/noice.nvim')
 
 vim.call('plug#end')
