@@ -1,7 +1,7 @@
 -- Map numbers directly for AZERTY keyboard
 vim.keymap.set({ 'n', 'o' }, '&', '1')
 vim.keymap.set({ 'n', 'o' }, 'é', '2')
-vim.keymap.set({ 'n', 'o' }, '"', '3')
+vim.keymap.set({ 'n', 'o' }, '"', '3') -- Note: this mapping is temporarily disabled in Neovide config when pasting.
 vim.keymap.set({ 'n', 'o' }, '\'', '4')
 vim.keymap.set({ 'n', 'o' }, '(', '5')
 vim.keymap.set({ 'n', 'o' }, '-', '6')
