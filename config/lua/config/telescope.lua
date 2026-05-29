@@ -4,6 +4,9 @@ local actions = require('telescope.actions')
 -- Setup for extensions
 require('telescope').setup({
   pickers = {
+    file_browser = {
+      cache_picker = true
+    },
     colorscheme = {
       enable_preview = true
     }
@@ -13,6 +16,12 @@ require('telescope').setup({
     layout_strategy = 'flex',
     sorting_strategy = 'ascending',
     winblend = 30,
+    cache_picker = {
+      num_pickers = 10,
+      limit_entries = 1000,
+      ignore_empty_prompt = false
+    }
+
   },
   extensions = {
     ['ui-select'] = {
