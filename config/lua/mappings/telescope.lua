@@ -19,7 +19,6 @@ do
   end, {})
   local browser_opened = nil
   vim.keymap.set('n', '<Leader>fb', function()
-    t = state.get_global_key("cached_pickers")
     if browser_opened == nil then
       extensions.file_browser.file_browser()
       browser_opened = true
@@ -32,7 +31,6 @@ do
           break
         end
       end
-      print(picker_index)
       builtin.resume({ cache_index = picker_index })
     end
   end
