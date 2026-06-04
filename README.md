@@ -20,3 +20,8 @@ This will copy your local configuration to the repository. Don't forget to
 check the diff to make sure everything went smoothly (for exemple, to avoid
 removing things from the config that you simply hadn't synced with your local
 config).
+
+## Note on Norg parser
+
+The Norg treesitter parser is in a weird state at the moment.
+Follow this workaround to make it work: <https://github.com/nvim-neorg/neorg/issues/1645#issuecomment-2747467562>
